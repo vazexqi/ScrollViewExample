@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsq-lM-AA8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZe-wj-oQH" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="7U0-Iu-Fox">
+                                                <rect key="frame" x="50" y="50" width="500" height="110"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First line" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Btk-Zm-PvA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="500" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="9Lh-WM-QCf"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Second line" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vYk-hv-pcm">
+                                                        <rect key="frame" x="0.0" y="80" width="500" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="YKB-4i-TMd"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="7U0-Iu-Fox" secondAttribute="trailing" constant="50" id="OaD-uN-A1J"/>
+                                            <constraint firstItem="7U0-Iu-Fox" firstAttribute="leading" secondItem="CZe-wj-oQH" secondAttribute="leading" constant="50" id="dbx-ZX-hzL"/>
+                                            <constraint firstItem="7U0-Iu-Fox" firstAttribute="top" secondItem="CZe-wj-oQH" secondAttribute="top" constant="50" id="q8P-BM-9Wh"/>
+                                            <constraint firstAttribute="bottom" secondItem="7U0-Iu-Fox" secondAttribute="bottom" constant="50" id="wTk-6v-4Ki"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CZe-wj-oQH" firstAttribute="leading" secondItem="qsq-lM-AA8" secondAttribute="leading" id="8X5-Nr-Ryu"/>
+                                    <constraint firstAttribute="bottom" secondItem="CZe-wj-oQH" secondAttribute="bottom" id="SNP-Bt-Ltc"/>
+                                    <constraint firstItem="CZe-wj-oQH" firstAttribute="top" secondItem="qsq-lM-AA8" secondAttribute="top" id="hRR-G2-Vni"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZe-wj-oQH" secondAttribute="trailing" id="oQf-T8-4EW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="top" secondItem="qsq-lM-AA8" secondAttribute="top" id="Dip-cB-VSY"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qsq-lM-AA8" secondAttribute="bottom" id="VGG-ku-vhk"/>
+                            <constraint firstItem="CZe-wj-oQH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lme-yA-ovh"/>
+                            <constraint firstAttribute="trailing" secondItem="qsq-lM-AA8" secondAttribute="trailing" id="lnh-vk-bCP"/>
+                            <constraint firstAttribute="leading" secondItem="qsq-lM-AA8" secondAttribute="leading" id="weE-VD-nrn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="CZe-wj-oQH" id="4Z0-fj-e7x"/>
+                        <outlet property="scrollView" destination="qsq-lM-AA8" id="YfG-vG-yAX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
