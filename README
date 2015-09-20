@@ -1,0 +1,18 @@
+# Introduction
+
+This simple project shows how to mix Auto Layout and UIScrollView so that your
+content automatically moves up when the keyboard appears.
+
+# Key tip
+
+As pointed out [here](http://natashatherobot.com/ios-autolayout-scrollview/),
+"[t]he key to getting the constraints to work properly however, is adding an
+Equal Width constraint between the main View and the ContentView."
+
+# Useful resources
+
+http://natashatherobot.com/ios-autolayout-scrollview/
+https://www.objc.io/issues/3-views/advanced-auto-layout-toolbox/
+https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW7
+http://stackoverflow.com/questions/18837166/how-to-mimic-keyboard-animation-on-ios-7-to-add-done-button-to-numeric-keyboar
+
